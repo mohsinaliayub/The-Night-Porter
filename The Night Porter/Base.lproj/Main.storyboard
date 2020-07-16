@@ -15,17 +15,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cxw-nW-je3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cxw-nW-je3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="u1g-dJ-Lfs"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="JkR-jq-Qhq"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snl-wQ-ytM">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KMr-gS-ymi"/>
+                                    <barButtonItem enabled="NO" title="Dark mode" id="pC4-Cv-a2Y"/>
+                                    <barButtonItem style="plain" id="ooi-0F-WZR">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="5DL-m2-GRW">
+                                            <rect key="frame" x="308" y="6.5" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="onTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="toggleDarkMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="FVb-IR-rng"/>
+                                            </connections>
+                                        </switch>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cxw-nW-je3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3er-he-Jgc"/>
+                            <constraint firstItem="cxw-nW-je3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FbD-jX-pzc"/>
+                            <constraint firstItem="cxw-nW-je3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="L9c-a5-kEA"/>
+                            <constraint firstItem="cxw-nW-je3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qcQ-i2-yue"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

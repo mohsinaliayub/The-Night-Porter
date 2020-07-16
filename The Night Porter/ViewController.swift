@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // Table View DataSource methods
     func numberOfSections(in tableView: UITableView) -> Int {
+        tableView.backgroundColor = .clear
+        
         return 3
     }
     
@@ -60,10 +62,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.textLabel?.text = "This shouldn't happen"
         }
         
+        cell.backgroundColor = .clear
+        
         return cell
     }
     
-
+    @IBAction func toggleDarkMode(_ sender: UISwitch) {
+        if sender.isOn {
+            view.backgroundColor = .darkGray
+        } else {
+            view.backgroundColor = .white
+        }
+    }
+    
     // create [String] arrays of tasks
     let dailyTasks = ["Close all windows",
                       "Check all doors",
