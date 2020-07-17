@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B660513E24C1FDFE00D20739 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660513D24C1FDFE00D20739 /* Task.swift */; };
 		B6E0EFE524B43D6E00AC67AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0EFE424B43D6E00AC67AA /* AppDelegate.swift */; };
 		B6E0EFE724B43D6E00AC67AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0EFE624B43D6E00AC67AA /* SceneDelegate.swift */; };
 		B6E0EFE924B43D6E00AC67AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0EFE824B43D6E00AC67AA /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B660513D24C1FDFE00D20739 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B6E0EFE124B43D6E00AC67AA /* The Night Porter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Night Porter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0EFE424B43D6E00AC67AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6E0EFE624B43D6E00AC67AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				B6E0EFE424B43D6E00AC67AA /* AppDelegate.swift */,
 				B6E0EFE624B43D6E00AC67AA /* SceneDelegate.swift */,
 				B6E0EFE824B43D6E00AC67AA /* ViewController.swift */,
+				B660513D24C1FDFE00D20739 /* Task.swift */,
 				B6E0EFEA24B43D6E00AC67AA /* Main.storyboard */,
 				B6E0EFED24B43D7200AC67AA /* Assets.xcassets */,
 				B6E0EFEF24B43D7200AC67AA /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B660513E24C1FDFE00D20739 /* Task.swift in Sources */,
 				B6E0EFE924B43D6E00AC67AA /* ViewController.swift in Sources */,
 				B6E0EFE524B43D6E00AC67AA /* AppDelegate.swift in Sources */,
 				B6E0EFE724B43D6E00AC67AA /* SceneDelegate.swift in Sources */,
