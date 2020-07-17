@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var taskTableView: UITableView!
+    
     // create task arrays
     var dailyTasks = [
         Task(name: "Close all windows", type: .daily, completed: false, lastCompleted: nil),
@@ -136,6 +138,42 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else {
             view.backgroundColor = .white
         }
+    }
+    
+    @IBAction func resetList(_ sender: Any) {
+        
+        let confirm = UIAlertController(title: "Are you sure?", message: "Really reset the list?", preferredStyle: .alert)
+        
+        let yesAction = UIAlertAction(title: "Yes", style: .destructive) {
+            action in
+            
+            for i in 0..<self.dailyTasks.count {
+                self.dailyTasks[i].completed = false
+            }
+            
+            for i in 0..<self.weeklyTasks.count {
+                self.weeklyTasks[i].completed = false
+            }
+            
+            for i in 0..<self.monthlyTasks.count {
+                self.monthlyTasks[i].completed = false
+            }
+            
+            self.taskTableView.reloadData()
+            
+        }
+        
+        let noAction = UIAlertAction(title: "No", style: .cancel) {
+            action in
+            print("That was a close one!")
+        }
+        
+        // add actions to alert controller
+        confirm.addAction(yesAction)
+        confirm.addAction(noAction)
+        
+        // show it
+        present(confirm, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
